@@ -46,11 +46,6 @@ jobs:
     environment:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    services:
-      open-llm:
-        ports:
-          - 80:80
       
     steps:
       - name: Download artifact from build job
